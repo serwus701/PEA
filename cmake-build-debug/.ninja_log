@@ -1,0 +1,14 @@
+# ninja log v5
+25	751	6876647783082175	CMakeFiles/Proj1.dir/Graph.cpp.obj	ffe6f60af8eb0da0
+4	884	6876648390182658	CMakeFiles/Proj1.dir/main.cpp.obj	f8c9c9ce12a8e04a
+863	1129	6876603900058318	Proj1.exe	78d32652cc092db8
+21	861	6876648389880504	CMakeFiles/Proj1.dir/BruteForce.cpp.obj	af6e4c2759096192
+7	656	6876648632416636	CMakeFiles/Proj1.dir/Path.cpp.obj	c2e2f74905775b2b
+5	954	6876650857828485	CMakeFiles/Proj1.dir/Array/MyArray.cpp.obj	732f44d8660e5583
+4	778	6876652565810372	CMakeFiles/Proj1.dir/FileManagement.cpp.obj	e94b4db438048681
+778	1042	6876652568413398	Proj1.exe	943b7eaaf85a9a25
+28	1102	6876657924073385	CMakeFiles/Proj1.dir/main.cpp.obj	f8c9c9ce12a8e04a
+5	1140	6876657924452365	CMakeFiles/Proj1.dir/Graph.cpp.obj	ffe6f60af8eb0da0
+7	819	6876659631864144	CMakeFiles/Proj1.dir/BruteForce.cpp.obj	af6e4c2759096192
+32	831	6876659632043660	CMakeFiles/Proj1.dir/Path.cpp.obj	c2e2f74905775b2b
+831	1066	6876659634389438	Proj1.exe	943b7eaaf85a9a25
