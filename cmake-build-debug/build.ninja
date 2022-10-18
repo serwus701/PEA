@@ -73,18 +73,6 @@ build CMakeFiles/Proj1.dir/Path.cpp.obj: CXX_COMPILER__Proj1_Debug E$:/Code/PEA/
   OBJECT_DIR = CMakeFiles\Proj1.dir
   OBJECT_FILE_DIR = CMakeFiles\Proj1.dir
 
-build CMakeFiles/Proj1.dir/Array/MyArray.cpp.obj: CXX_COMPILER__Proj1_Debug E$:/Code/PEA/Proj1/Array/MyArray.cpp || cmake_object_order_depends_target_Proj1
-  DEP_FILE = CMakeFiles\Proj1.dir\Array\MyArray.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Proj1.dir
-  OBJECT_FILE_DIR = CMakeFiles\Proj1.dir\Array
-
-build CMakeFiles/Proj1.dir/FileManagement.cpp.obj: CXX_COMPILER__Proj1_Debug E$:/Code/PEA/Proj1/FileManagement.cpp || cmake_object_order_depends_target_Proj1
-  DEP_FILE = CMakeFiles\Proj1.dir\FileManagement.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Proj1.dir
-  OBJECT_FILE_DIR = CMakeFiles\Proj1.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Proj1
@@ -93,7 +81,7 @@ build CMakeFiles/Proj1.dir/FileManagement.cpp.obj: CXX_COMPILER__Proj1_Debug E$:
 #############################################
 # Link the executable Proj1.exe
 
-build Proj1.exe: CXX_EXECUTABLE_LINKER__Proj1_Debug CMakeFiles/Proj1.dir/main.cpp.obj CMakeFiles/Proj1.dir/Graph.cpp.obj CMakeFiles/Proj1.dir/BruteForce.cpp.obj CMakeFiles/Proj1.dir/Path.cpp.obj CMakeFiles/Proj1.dir/Array/MyArray.cpp.obj CMakeFiles/Proj1.dir/FileManagement.cpp.obj
+build Proj1.exe: CXX_EXECUTABLE_LINKER__Proj1_Debug CMakeFiles/Proj1.dir/main.cpp.obj CMakeFiles/Proj1.dir/Graph.cpp.obj CMakeFiles/Proj1.dir/BruteForce.cpp.obj CMakeFiles/Proj1.dir/Path.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Proj1.dir

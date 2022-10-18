@@ -2,21 +2,33 @@
 // Created by serwu on 16.10.2022.
 //
 
+#include <iostream>
 #include "BruteForce.h"
-#include "Array/MyArray.h"
 
 void BruteForce::solution(Graph inputGraph) {
-    auto *sizes = new MyArray;
-    int possiblePathsArray[inputGraph.getNodeNumber()];
+    int graphLen = inputGraph.getNodeNumber();
+    int minPathCost = INT16_MAX;
+    int minPath[graphLen];
 
-    for (int i = 0; i < inputGraph.getNodeNumber(); ++i) {
-        possiblePathsArray[i] = i;
+    int currPath[graphLen];
+
+    for (int i = 0; i < graphLen; ++i) {
+        currPath[i] = i;
     }
 
     do {
-        sizes->addFront(inputGraph.getPathCost(new Path(possiblePathsArray, inputGraph.getNodeNumber())));
-    } while (std::next_permutation(possiblePathsArray, possiblePathsArray + inputGraph.getNodeNumber()));
+        int currPathCost = inputGraph.getPathCost(new Path(currPath, graphLen));
+        if(currPathCost < minPathCost && currPathCost > -1){
+            minPathCost = currPathCost;
+            for (int i = 0; i < inputGraph.getNodeNumber(); ++i) {
+                minPath[i] = currPath[i];
+            }
+        }
+    } while (std::next_permutation(currPath, currPath + graphLen));
 
-    sizes->show();
+    std::cout << minPathCost << std::endl;
+    for (int i = 0; i < graphLen; ++i) {
+        std::cout << minPath[i] << std::endl;
+    }
 }
 

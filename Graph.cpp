@@ -62,6 +62,6 @@ int Graph::getPathCost(Path *path) {
             path->pop();
         } else
             return -1;
-        return totalCost;
     }
+    return totalCost;
 }
