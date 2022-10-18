@@ -16,9 +16,10 @@ void BruteForce::solution(Graph inputGraph) {
         currPath[i] = i;
     }
 
+
     do {
         int currPathCost = inputGraph.getPathCost(new Path(currPath, graphLen));
-        if(currPathCost < minPathCost && currPathCost > -1){
+        if(currPathCost < minPathCost && currPathCost > 0){
             minPathCost = currPathCost;
             for (int i = 0; i < inputGraph.getNodeNumber(); ++i) {
                 minPath[i] = currPath[i];

@@ -54,7 +54,8 @@ int Graph::getPathCost(Path *path) {
 
     path->reverse();
     int currRow = path->top();
-    path->pop();
+    int startNode = currRow;
+            path->pop();
     while (!path->empty()) {
         if(graph[currRow][path->top()] != -1){
             totalCost += graph[currRow][path->top()];
@@ -63,5 +64,6 @@ int Graph::getPathCost(Path *path) {
         } else
             return -1;
     }
-    return totalCost;
+    int dupa = totalCost + graph[currRow][0];
+    return totalCost + graph[currRow][startNode];
 }
