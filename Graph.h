@@ -6,7 +6,6 @@
 #define PROJ1_GRAPH_H
 
 #include <string>
-#include "Path.h"
 
 
 class Graph {
@@ -17,7 +16,7 @@ private:
 public:
     int getNodeNumber();
     int getFromPosition(int, int);
-    int getPathCost(Path*);
+    int getPathCost(int *, int);
     void readDataFromFile(const std::string&);
     void readDataFromConsole();
 

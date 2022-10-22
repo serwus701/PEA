@@ -9,7 +9,8 @@
 #include "Graph.h"
 
 class BruteForce {
-
+private:
+    static void printAnswers(int, int, int*);
 public:
     static void solution(Graph inputGraph);
 };
