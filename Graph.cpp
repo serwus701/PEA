@@ -6,7 +6,8 @@
 #include "Graph.h"
 
 void Graph::readDataFromFile(const std::string& fileName) {
-    std::ifstream myFile(fileName);
+    std::string realFileName = "input/" + fileName + ".txt";
+    std::ifstream myFile(realFileName);
     if (myFile) {
         myFile >> nodeNumber;
 
@@ -49,21 +50,17 @@ int Graph::getFromPosition(int x, int y) {
     return graph[x][y];
 }
 
-int Graph::getPathCost(Path *path) {
+int Graph::getPathCost(int *path, int pathSize) {
     int totalCost = 0;
 
-    path->reverse();
-    int currRow = path->top();
+    int currRow = *path;
     int startNode = currRow;
-            path->pop();
-    while (!path->empty()) {
-        if(graph[currRow][path->top()] != -1){
-            totalCost += graph[currRow][path->top()];
-            currRow = path->top();
-            path->pop();
+    for(int i = 1; i < pathSize; ++i) {
+        if(graph[currRow][*(path + i)] != -1){
+            totalCost += graph[currRow][*(path + i)];
+            currRow = *(path + i);
         } else
             return -1;
     }
-    int dupa = totalCost + graph[currRow][0];
     return totalCost + graph[currRow][startNode];
 }

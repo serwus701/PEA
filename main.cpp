@@ -6,11 +6,16 @@
 int main() {
     Graph * graph = new Graph;
 
-    graph->readDataFromFile("input.txt");
+    graph->readDataFromFile("tsp_6_2");
+
+    //int path[6] = {0, 1, 2, 3, 4, 5};
+
+    //std::cout << graph->getPathCost(path, 6);
 
     auto *myTimer = new Timer;
 
     myTimer->startCounter();
     (new BruteForce())->solution(*graph);
-    std::cout << myTimer->getCounter();
+    double counter = myTimer->getCounter();
+    std::cout << " Average time " << counter << " miliseconds"<< std::endl;
 }

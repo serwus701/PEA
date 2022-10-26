@@ -6,6 +6,7 @@
 			[
 				{
 					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20.2"
@@ -38,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Proj1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Proj1-Debug-9d91d19ce2b17cab58ff.json",
+					"jsonFile" : "target-Proj1-Debug-2dd364a32ae5263ec4f3.json",
 					"name" : "Proj1",
 					"projectIndex" : 0
 				}
@@ -48,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/serwu/kod/Clion/PEA/cmake-build-debug",
-		"source" : "C:/Users/serwu/kod/Clion/PEA"
+		"build" : "E:/Code/PEA/cmake-build-debug",
+		"source" : "E:/Code/PEA"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 2
+		"minor" : 4
 	}
 }
