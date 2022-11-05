@@ -9,14 +9,34 @@
 #include "Graph.h"
 
 class BranchAndBound {
-    int *visitedNodes;
-
+private:
     int currMinimalCost;
     Graph matrix;
 
-    BranchAndBound(Graph, int*);
+    int *finalPath;
 
+    bool *visited;
 
+    int finalResolution;
+
+    int notMinusOne(int);
+
+    int firstMin(int);
+
+    int secondMin(int);
+
+    void copyPathToFinal(int *);
+
+    void recursion(float, int, int, int *, bool *);
+
+    int ceil(float floatInput);
+
+    void printAnswers();
+
+public:
+    explicit BranchAndBound(Graph);
+
+    void solution();
 };
 
 

@@ -12,7 +12,7 @@ class BruteForce {
 private:
     static void printAnswers(int, int, int*);
 public:
-    static void solution(Graph inputGraph);
+    static void solution(Graph);
 };
 
 

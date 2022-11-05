@@ -16,7 +16,7 @@ private:
 public:
     int getNodeNumber();
     int getFromPosition(int, int);
-    int getPathCost(int *, int);
+    int getPathCost(const int *, int);
     void readDataFromFile(const std::string&);
     void readDataFromConsole();
 

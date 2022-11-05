@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/serwu/kod/Clion/PEA/BranchAndBound.cpp
+BranchAndBound.h
+C:/Users/serwu/kod/Clion/PEA/BranchAndBound.h
+tgmath.h
+-
+iostream
+-
+
+C:/Users/serwu/kod/Clion/PEA/BranchAndBound.h
+Graph.h
+C:/Users/serwu/kod/Clion/PEA/Graph.h
+
+C:/Users/serwu/kod/Clion/PEA/Graph.h
+string
+-
+

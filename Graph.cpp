@@ -50,7 +50,7 @@ int Graph::getFromPosition(int x, int y) {
     return graph[x][y];
 }
 
-int Graph::getPathCost(int *path, int pathSize) {
+int Graph::getPathCost(const int *path, int pathSize) {
     int totalCost = 0;
 
     int currRow = *path;
