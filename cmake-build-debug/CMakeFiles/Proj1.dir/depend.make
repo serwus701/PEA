@@ -12,12 +12,18 @@ CMakeFiles/Proj1.dir/BruteForce.cpp.obj: \
 CMakeFiles/Proj1.dir/Graph.cpp.obj: \
  ../Graph.cpp \
  ../Graph.h
+CMakeFiles/Proj1.dir/Simulation.cpp.obj: \
+ ../BranchAndBound.h \
+ ../BruteForce.h \
+ ../Graph.h \
+ ../Simulation.cpp \
+ ../Simulation.h \
+ ../Timer.h
 CMakeFiles/Proj1.dir/Timer.cpp.obj: \
  ../Timer.cpp \
  ../Timer.h
 CMakeFiles/Proj1.dir/main.cpp.obj: \
- ../BranchAndBound.h \
  ../BruteForce.h \
  ../Graph.h \
- ../Timer.h \
+ ../Simulation.h \
  ../main.cpp

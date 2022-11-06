@@ -98,6 +98,12 @@
 		<Unit filename="C:/Users/serwu/kod/Clion/PEA/Graph.h">
 			<Option target="Proj1"/>
 		</Unit>
+		<Unit filename="C:/Users/serwu/kod/Clion/PEA/Simulation.cpp">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="C:/Users/serwu/kod/Clion/PEA/Simulation.h">
+			<Option target="Proj1"/>
+		</Unit>
 		<Unit filename="C:/Users/serwu/kod/Clion/PEA/Timer.cpp">
 			<Option target="Proj1"/>
 		</Unit>

@@ -6,15 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/serwu/kod/Clion/PEA/BranchAndBound.cpp
-BranchAndBound.h
-C:/Users/serwu/kod/Clion/PEA/BranchAndBound.h
-tgmath.h
--
+C:/Users/serwu/kod/Clion/PEA/BruteForce.cpp
 iostream
 -
+synchapi.h
+-
+BruteForce.h
+C:/Users/serwu/kod/Clion/PEA/BruteForce.h
 
-C:/Users/serwu/kod/Clion/PEA/BranchAndBound.h
+C:/Users/serwu/kod/Clion/PEA/BruteForce.h
+algorithm
+-
 Graph.h
 C:/Users/serwu/kod/Clion/PEA/Graph.h
 

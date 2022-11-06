@@ -19,6 +19,7 @@ public:
     int getPathCost(const int *, int);
     void readDataFromFile(const std::string&);
     void readDataFromConsole();
+    void randomlyGenerateGraph(int);
 
     void printGraph();
 };

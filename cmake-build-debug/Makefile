@@ -200,6 +200,30 @@ Graph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
 
+Simulation.obj: Simulation.cpp.obj
+.PHONY : Simulation.obj
+
+# target to build an object file
+Simulation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/Simulation.cpp.obj
+.PHONY : Simulation.cpp.obj
+
+Simulation.i: Simulation.cpp.i
+.PHONY : Simulation.i
+
+# target to preprocess a source file
+Simulation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/Simulation.cpp.i
+.PHONY : Simulation.cpp.i
+
+Simulation.s: Simulation.cpp.s
+.PHONY : Simulation.s
+
+# target to generate assembly for a file
+Simulation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/Simulation.cpp.s
+.PHONY : Simulation.cpp.s
+
 Timer.obj: Timer.cpp.obj
 .PHONY : Timer.obj
 
@@ -266,6 +290,9 @@ help:
 	@echo ... Graph.obj
 	@echo ... Graph.i
 	@echo ... Graph.s
+	@echo ... Simulation.obj
+	@echo ... Simulation.i
+	@echo ... Simulation.s
 	@echo ... Timer.obj
 	@echo ... Timer.i
 	@echo ... Timer.s

@@ -12,12 +12,18 @@ CMakeFiles/Proj1.dir/BruteForce.cpp.obj
 CMakeFiles/Proj1.dir/Graph.cpp.obj
  C:/Users/serwu/kod/Clion/PEA/Graph.cpp
  C:/Users/serwu/kod/Clion/PEA/Graph.h
+CMakeFiles/Proj1.dir/Simulation.cpp.obj
+ C:/Users/serwu/kod/Clion/PEA/BranchAndBound.h
+ C:/Users/serwu/kod/Clion/PEA/BruteForce.h
+ C:/Users/serwu/kod/Clion/PEA/Graph.h
+ C:/Users/serwu/kod/Clion/PEA/Simulation.cpp
+ C:/Users/serwu/kod/Clion/PEA/Simulation.h
+ C:/Users/serwu/kod/Clion/PEA/Timer.h
 CMakeFiles/Proj1.dir/Timer.cpp.obj
  C:/Users/serwu/kod/Clion/PEA/Timer.cpp
  C:/Users/serwu/kod/Clion/PEA/Timer.h
 CMakeFiles/Proj1.dir/main.cpp.obj
- C:/Users/serwu/kod/Clion/PEA/BranchAndBound.h
  C:/Users/serwu/kod/Clion/PEA/BruteForce.h
  C:/Users/serwu/kod/Clion/PEA/Graph.h
- C:/Users/serwu/kod/Clion/PEA/Timer.h
+ C:/Users/serwu/kod/Clion/PEA/Simulation.h
  C:/Users/serwu/kod/Clion/PEA/main.cpp

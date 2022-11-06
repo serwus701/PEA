@@ -26,7 +26,7 @@ void BruteForce::solution(Graph inputGraph) {
         }
     } while (std::next_permutation(currPath, currPath + graphLen));
 
-    printAnswers(minPathCost, graphLen, minPath);
+    //printAnswers(minPathCost, graphLen, minPath);
 }
 
 void BruteForce::printAnswers(int minPathCost, int graphLen, int* minPath) {

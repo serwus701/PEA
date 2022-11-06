@@ -15,21 +15,17 @@ private:
 
     int *finalPath;
 
-    bool *visited;
-
-    int finalResolution;
+    int finalCost;
 
     int notMinusOne(int);
 
-    int firstMin(int);
+    int cheapestStep(int);
 
-    int secondMin(int);
+    int secondCheapestStep(int);
 
-    void copyPathToFinal(int *);
+    void copyPathToFinal(const int *);
 
-    void recursion(float, int, int, int *, bool *);
-
-    int ceil(float floatInput);
+    void recursion(int currBound, int currWeight, int level, int *currPath, bool *visited);
 
     void printAnswers();
 

@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include <fstream>
+#include <ctime>
 #include "Graph.h"
 
 void Graph::readDataFromFile(const std::string& fileName) {
@@ -35,7 +36,7 @@ void Graph::readDataFromConsole() {
 void Graph::printGraph() {
     for (int i = 0; i < nodeNumber; ++i) {
         for (int j = 0; j < nodeNumber; ++j) {
-            std::cout << graph[i][j];
+            std::cout << graph[i][j] << " ";
         }
         std::cout << std::endl;
     }
@@ -63,4 +64,23 @@ int Graph::getPathCost(const int *path, int pathSize) {
             return -1;
     }
     return totalCost + graph[currRow][startNode];
+}
+
+void Graph::randomlyGenerateGraph(int size) {
+    srand (time(nullptr));
+    nodeNumber = size;
+    graph = new int *[nodeNumber];
+
+    for (int i = 0; i < nodeNumber; ++i) {
+        graph[i] = new int[nodeNumber];
+    }
+
+    for (int i = 0; i < nodeNumber; ++i) {
+        for (int j = 0; j < nodeNumber; ++j) {
+            if(i != j)
+                graph[i][j] = rand() % 100 + 1;
+            else
+                graph[i][j] = -1;
+        }
+    }
 }

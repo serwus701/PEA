@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/serwu/kod/Clion/PEA/BranchAndBound.cpp" "C:/Users/serwu/kod/Clion/PEA/cmake-build-debug/CMakeFiles/Proj1.dir/BranchAndBound.cpp.obj"
   "C:/Users/serwu/kod/Clion/PEA/BruteForce.cpp" "C:/Users/serwu/kod/Clion/PEA/cmake-build-debug/CMakeFiles/Proj1.dir/BruteForce.cpp.obj"
   "C:/Users/serwu/kod/Clion/PEA/Graph.cpp" "C:/Users/serwu/kod/Clion/PEA/cmake-build-debug/CMakeFiles/Proj1.dir/Graph.cpp.obj"
+  "C:/Users/serwu/kod/Clion/PEA/Simulation.cpp" "C:/Users/serwu/kod/Clion/PEA/cmake-build-debug/CMakeFiles/Proj1.dir/Simulation.cpp.obj"
   "C:/Users/serwu/kod/Clion/PEA/Timer.cpp" "C:/Users/serwu/kod/Clion/PEA/cmake-build-debug/CMakeFiles/Proj1.dir/Timer.cpp.obj"
   "C:/Users/serwu/kod/Clion/PEA/main.cpp" "C:/Users/serwu/kod/Clion/PEA/cmake-build-debug/CMakeFiles/Proj1.dir/main.cpp.obj"
   )

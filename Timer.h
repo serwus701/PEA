@@ -18,6 +18,8 @@ public:
 
     void startCounter();
 
+    void resetCounter();
+
     double getCounter() const;
 };
 
