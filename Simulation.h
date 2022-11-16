@@ -12,6 +12,7 @@ private:
     double simulateBnB(int, int);
 
 public:
+    void simulateBothAlgorithmsInterface();
     void run();
 };
 

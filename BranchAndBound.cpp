@@ -48,12 +48,12 @@ void BranchAndBound::solution() {
     visited[0] = true;
     currPath[0] = 0;
 
-    recursion(currBound, 0, 1, currPath, visited);
+    recursionBuildSearchTree(currBound, 0, 1, currPath, visited);
 
-    //printAnswers();
+    printAnswers();
 }
 
-void BranchAndBound::recursion(int currBound, int currWeight, int level, int *currPath, bool *visited) {
+void BranchAndBound::recursionBuildSearchTree(int currBound, int currWeight, int level, int *currPath, bool *visited) {
     if (level == matrix.getNodeNumber()) {
         if(matrix.getFromPosition(currPath[level - 1], currPath[0]) != 0){
             int currCost = currWeight + matrix.getFromPosition(currPath[level - 1], currPath[0]);
@@ -67,7 +67,7 @@ void BranchAndBound::recursion(int currBound, int currWeight, int level, int *cu
 
     for (int i = 0; i < matrix.getNodeNumber(); ++i) {
 
-        if (matrix.getFromPosition(notMinusOne(currPath[level - 1]), i) != 0 && !visited[i]) {
+        if (matrix.getFromPosition(notMinusOne(currPath[level - 1]), i) > 0 && !visited[i]) {
             int temp = currBound;
             currWeight += matrix.getFromPosition(notMinusOne(currPath[level - 1]), i);
 
@@ -82,11 +82,11 @@ void BranchAndBound::recursion(int currBound, int currWeight, int level, int *cu
                 currPath[level] = i;
                 visited[i] = true;
 
-                recursion(currBound, currWeight, level + 1, currPath, visited);
+                recursionBuildSearchTree(currBound, currWeight, level + 1, currPath, visited);
             }
 
 
-            currWeight -= matrix.getFromPosition(notMinusOne(currPath[level - 1]), i);
+            currWeight -= matrix.getFromPosition(currPath[level - 1], i);
             currBound = temp;
 
             for (int j = 0; j < matrix.getNodeNumber(); ++j) {
@@ -106,7 +106,7 @@ int BranchAndBound::cheapestStep(int row) {
     int min = INT16_MAX;
 
     for (int i = 0; i < matrix.getNodeNumber(); ++i) {
-        if (matrix.getFromPosition(row, i) < min && row != i) {
+        if (matrix.getFromPosition(row, i) < min && row != i && matrix.getFromPosition(row, i) > 0) {
             min = matrix.getFromPosition(row, i);
         }
     }
@@ -120,11 +120,11 @@ int BranchAndBound::secondCheapestStep(int position) {
         if (position == i) {
             continue;
         }
-        if (matrix.getFromPosition(position, i) <= first) {
+        if (matrix.getFromPosition(position, i) <= first && matrix.getFromPosition(position, i) > 0) {
             second = first;
             first = matrix.getFromPosition(position, i);
         } else {
-            if (matrix.getFromPosition(position, i) <= second && matrix.getFromPosition(position, i) != first) {
+            if (matrix.getFromPosition(position, i) <= second && matrix.getFromPosition(position, i) != first && matrix.getFromPosition(position, i) > 0) {
                 second = matrix.getFromPosition(position, i);
             }
         }
@@ -142,8 +142,8 @@ void BranchAndBound::copyPathToFinal(const int *currPath) {
 
 void BranchAndBound::printAnswers() {
 
-    std::cout << "Minimal cost: " << finalCost << std::endl;
-    std::cout << "Minimal path: " << std::endl;
+    std::cout << "BnB Minimal cost: " << finalCost << std::endl;
+    std::cout << "BnB Minimal path: " << std::endl;
 
     for (int i = 0; i < matrix.getNodeNumber() + 1; ++i) {
         std::cout << *(finalPath + i) << " ";

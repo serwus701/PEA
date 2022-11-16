@@ -25,7 +25,7 @@ private:
 
     void copyPathToFinal(const int *);
 
-    void recursion(int currBound, int currWeight, int level, int *currPath, bool *visited);
+    void recursionBuildSearchTree(int currBound, int currWeight, int level, int *currPath, bool *visited);
 
     void printAnswers();
 

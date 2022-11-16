@@ -23,7 +23,9 @@ CMakeFiles/Proj1.dir/Timer.cpp.obj: \
  ../Timer.cpp \
  ../Timer.h
 CMakeFiles/Proj1.dir/main.cpp.obj: \
+ ../BranchAndBound.h \
  ../BruteForce.h \
  ../Graph.h \
  ../Simulation.h \
+ ../Timer.h \
  ../main.cpp

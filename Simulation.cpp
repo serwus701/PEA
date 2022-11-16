@@ -11,11 +11,15 @@
 
 void Simulation::run() {
 
-    int graphSize = 5;
+    int graphSize;
     int numberOfGraphs = 100;
 
-    std::cout << " Average bf time " << simulateBF(graphSize, numberOfGraphs) << "\n";
-    std::cout << " Average bnb time " << simulateBnB(graphSize, numberOfGraphs) << "\n";
+    for (int i = 5; i < 13; ++i) {
+        graphSize = i;
+
+        std::cout << " Average bf time size [" << i << "] " << simulateBF(graphSize, numberOfGraphs) << "\n";
+        std::cout << " Average bnb time size [" << i << "] " << simulateBnB(graphSize, numberOfGraphs) << "\n\n";
+    }
 }
 
 double Simulation::simulateBF(int graphSize, int numberOfGraphs) {
@@ -54,4 +58,16 @@ double Simulation::simulateBnB(int graphSize, int numberOfGraphs) {
         delete graph;
     }
     return totalTime/numberOfGraphs;
+}
+
+void Simulation::simulateBothAlgorithmsInterface() {
+    std::string input;
+    std::cout << "Input file name (no txt)" <<std::endl;
+    std::cin >> input;
+    auto graph = new Graph();
+    graph->readDataFromFile(input);
+    graph->printGraph();
+    std::cout << std::endl;
+    (new BranchAndBound(*graph))->solution();
+    ((new BruteForce())->solution(*graph));
 }

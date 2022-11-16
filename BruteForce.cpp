@@ -26,15 +26,15 @@ void BruteForce::solution(Graph inputGraph) {
         }
     } while (std::next_permutation(currPath, currPath + graphLen));
 
-    //printAnswers(minPathCost, graphLen, minPath);
+    printAnswers(minPathCost, graphLen, minPath);
 }
 
 void BruteForce::printAnswers(int minPathCost, int graphLen, int* minPath) {
-    std::cout << "MINIMAL PATH COST" << std::endl;
-    std::cout << minPathCost << std::endl << std::endl;
-    std::cout << "MINIMAL PATH" << std::endl;
+    std::cout << "BF Minimal cost ";
+    std::cout << minPathCost << std::endl;
+    std::cout << "BF Minimal path" << std::endl;
     for (int i = 0; i < graphLen; ++i) {
-        std::cout << minPath[i] << std::endl;
+        std::cout << minPath[i] << " ";
     }
     std::cout << std::endl;
 }
