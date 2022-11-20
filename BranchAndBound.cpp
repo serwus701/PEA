@@ -24,7 +24,7 @@ BranchAndBound::BranchAndBound(Graph matrix) {
 }
 
 void BranchAndBound::solution() {
-    int currBound = 0;
+    int currBound = INT16_MAX;
     int nodeNumber = matrix.getNodeNumber();
     int currPath[nodeNumber + 1];
     bool visited[nodeNumber];
@@ -40,20 +40,15 @@ void BranchAndBound::solution() {
         currBound += cheapestStep(i) + secondCheapestStep(i);
     }
 
-    if(currBound % 2 == 1)
-        currBound--;
-    currBound /=2;
-    currBound++;
-
     visited[0] = true;
     currPath[0] = 0;
 
-    recursionBuildSearchTree(currBound, 0, 1, currPath, visited);
+    recursionBuildSearchTree(0, 1, currPath, visited);
 
     printAnswers();
 }
 
-void BranchAndBound::recursionBuildSearchTree(int currBound, int currWeight, int level, int *currPath, bool *visited) {
+void BranchAndBound::recursionBuildSearchTree(int currWeight, int level, int *currPath, bool *visited) {
     if (level == matrix.getNodeNumber()) {
         if(matrix.getFromPosition(currPath[level - 1], currPath[0]) > 0){
             int currCost = currWeight + matrix.getFromPosition(currPath[level - 1], currPath[0]);
@@ -68,35 +63,18 @@ void BranchAndBound::recursionBuildSearchTree(int currBound, int currWeight, int
     for (int i = 0; i < matrix.getNodeNumber(); ++i) {
 
         if (matrix.getFromPosition(currPath[level - 1], i) > 0 && !visited[i]) {
-            int temp = currBound;
-            currWeight += matrix.getFromPosition(notMinusOne(currPath[level - 1]), i);
-
-            if (level == 1) {
-                currBound -= ((cheapestStep(notMinusOne(currPath[i])) + cheapestStep(i)) / 2);
-            } else {
-                currBound -= ((secondCheapestStep(notMinusOne(currPath[i])) + cheapestStep(i)) / 2);
-            }
 
 
-            if (currBound + currWeight < finalCost) {
+            if (matrix.getFromPosition(currPath[level - 1], i) + currWeight < finalCost) {
+                int tempWeight = currWeight;
+                currWeight += matrix.getFromPosition(currPath[level - 1], i);
                 currPath[level] = i;
                 visited[i] = true;
 
-                recursionBuildSearchTree(currBound, currWeight, level + 1, currPath, visited);
-            }
+                recursionBuildSearchTree(currWeight, level + 1, currPath, visited);
 
-
-            currWeight -= matrix.getFromPosition(currPath[level - 1], i);
-            currBound = temp;
-
-            for (int j = 0; j < matrix.getNodeNumber(); ++j) {
+                currWeight = tempWeight;
                 visited[i] = false;
-            }
-
-            for (int j = 0; j < level; ++j) {
-                if (currPath[j] != -1) {
-                    visited[currPath[j]] = true;
-                }
             }
         }
     }

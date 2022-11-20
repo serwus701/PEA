@@ -10,7 +10,6 @@
 
 class BranchAndBound {
 private:
-    int currMinimalCost;
     Graph matrix;
 
     int *finalPath;
@@ -25,7 +24,7 @@ private:
 
     void copyPathToFinal(const int *);
 
-    void recursionBuildSearchTree(int currBound, int currWeight, int level, int *currPath, bool *visited);
+    void recursionBuildSearchTree(int currWeight, int level, int *currPath, bool *visited);
 
     void printAnswers();
 
