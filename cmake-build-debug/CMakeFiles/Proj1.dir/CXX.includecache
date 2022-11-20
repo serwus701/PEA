@@ -6,37 +6,17 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/serwu/kod/Clion/PEA/BranchAndBound.cpp
+BranchAndBound.h
 C:/Users/serwu/kod/Clion/PEA/BranchAndBound.h
-Graph.h
-C:/Users/serwu/kod/Clion/PEA/Graph.h
-
-C:/Users/serwu/kod/Clion/PEA/BruteForce.h
-algorithm
+iostream
 -
+
+C:/Users/serwu/kod/Clion/PEA/BranchAndBound.h
 Graph.h
 C:/Users/serwu/kod/Clion/PEA/Graph.h
 
 C:/Users/serwu/kod/Clion/PEA/Graph.h
 string
--
-
-C:/Users/serwu/kod/Clion/PEA/Simulation.cpp
-iostream
--
-Simulation.h
-C:/Users/serwu/kod/Clion/PEA/Simulation.h
-Graph.h
-C:/Users/serwu/kod/Clion/PEA/Graph.h
-Timer.h
-C:/Users/serwu/kod/Clion/PEA/Timer.h
-BruteForce.h
-C:/Users/serwu/kod/Clion/PEA/BruteForce.h
-BranchAndBound.h
-C:/Users/serwu/kod/Clion/PEA/BranchAndBound.h
-
-C:/Users/serwu/kod/Clion/PEA/Simulation.h
-
-C:/Users/serwu/kod/Clion/PEA/Timer.h
-cctype
 -
 

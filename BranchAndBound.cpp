@@ -55,7 +55,7 @@ void BranchAndBound::solution() {
 
 void BranchAndBound::recursionBuildSearchTree(int currBound, int currWeight, int level, int *currPath, bool *visited) {
     if (level == matrix.getNodeNumber()) {
-        if(matrix.getFromPosition(currPath[level - 1], currPath[0]) != 0){
+        if(matrix.getFromPosition(currPath[level - 1], currPath[0]) > 0){
             int currCost = currWeight + matrix.getFromPosition(currPath[level - 1], currPath[0]);
             if (currCost < finalCost) {
                 copyPathToFinal(currPath);
@@ -67,7 +67,7 @@ void BranchAndBound::recursionBuildSearchTree(int currBound, int currWeight, int
 
     for (int i = 0; i < matrix.getNodeNumber(); ++i) {
 
-        if (matrix.getFromPosition(notMinusOne(currPath[level - 1]), i) > 0 && !visited[i]) {
+        if (matrix.getFromPosition(currPath[level - 1], i) > 0 && !visited[i]) {
             int temp = currBound;
             currWeight += matrix.getFromPosition(notMinusOne(currPath[level - 1]), i);
 
