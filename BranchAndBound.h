@@ -16,12 +16,6 @@ private:
 
     int finalCost;
 
-    int notMinusOne(int);
-
-    int cheapestStep(int);
-
-    int secondCheapestStep(int);
-
     void copyPathToFinal(const int *);
 
     void recursionBuildSearchTree(int currWeight, int level, int *currPath, bool *visited);

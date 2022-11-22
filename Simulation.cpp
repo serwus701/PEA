@@ -8,6 +8,7 @@
 #include "Timer.h"
 #include "BruteForce.h"
 #include "BranchAndBound.h"
+#include "DynamicProgramming.h"
 
 void Simulation::run() {
 
@@ -68,6 +69,7 @@ void Simulation::simulateBothAlgorithmsInterface() {
     graph->readDataFromFile(input);
     graph->printGraph();
     std::cout << std::endl;
+    (new DynamicProgramming(*graph))->solution();
     (new BranchAndBound(*graph))->solution();
     ((new BruteForce())->solution(*graph));
 }

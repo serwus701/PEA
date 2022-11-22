@@ -24,7 +24,6 @@ BranchAndBound::BranchAndBound(Graph matrix) {
 }
 
 void BranchAndBound::solution() {
-    int currBound = INT16_MAX;
     int nodeNumber = matrix.getNodeNumber();
     int currPath[nodeNumber + 1];
     bool visited[nodeNumber];
@@ -34,10 +33,6 @@ void BranchAndBound::solution() {
     }
     for (int i = 0; i < nodeNumber; ++i) {
         visited[i] = false;
-    }
-
-    for (int i = 0; i < nodeNumber; ++i) {
-        currBound += cheapestStep(i) + secondCheapestStep(i);
     }
 
     visited[0] = true;
@@ -80,36 +75,6 @@ void BranchAndBound::recursionBuildSearchTree(int currWeight, int level, int *cu
     }
 }
 
-int BranchAndBound::cheapestStep(int row) {
-    int min = INT16_MAX;
-
-    for (int i = 0; i < matrix.getNodeNumber(); ++i) {
-        if (matrix.getFromPosition(row, i) < min && row != i && matrix.getFromPosition(row, i) > 0) {
-            min = matrix.getFromPosition(row, i);
-        }
-    }
-    return min;
-}
-
-int BranchAndBound::secondCheapestStep(int position) {
-    int first = INT16_MAX;
-    int second = INT16_MAX;
-    for (int i = 0; i < matrix.getNodeNumber(); ++i) {
-        if (position == i) {
-            continue;
-        }
-        if (matrix.getFromPosition(position, i) <= first && matrix.getFromPosition(position, i) > 0) {
-            second = first;
-            first = matrix.getFromPosition(position, i);
-        } else {
-            if (matrix.getFromPosition(position, i) <= second && matrix.getFromPosition(position, i) != first && matrix.getFromPosition(position, i) > 0) {
-                second = matrix.getFromPosition(position, i);
-            }
-        }
-    }
-    return second;
-}
-
 void BranchAndBound::copyPathToFinal(const int *currPath) {
 
     for (int i = 0; i < matrix.getNodeNumber(); ++i) {
@@ -127,11 +92,4 @@ void BranchAndBound::printAnswers() {
         std::cout << *(finalPath + i) << " ";
     }
     std::cout << std::endl;
-}
-
-int BranchAndBound::notMinusOne(int input) {
-    if (input == -1)
-        return matrix.getNodeNumber() - 1;
-    else
-        return input;
 }

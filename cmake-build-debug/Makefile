@@ -176,6 +176,30 @@ BruteForce.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/BruteForce.cpp.s
 .PHONY : BruteForce.cpp.s
 
+DynamicProgramming.obj: DynamicProgramming.cpp.obj
+.PHONY : DynamicProgramming.obj
+
+# target to build an object file
+DynamicProgramming.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/DynamicProgramming.cpp.obj
+.PHONY : DynamicProgramming.cpp.obj
+
+DynamicProgramming.i: DynamicProgramming.cpp.i
+.PHONY : DynamicProgramming.i
+
+# target to preprocess a source file
+DynamicProgramming.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/DynamicProgramming.cpp.i
+.PHONY : DynamicProgramming.cpp.i
+
+DynamicProgramming.s: DynamicProgramming.cpp.s
+.PHONY : DynamicProgramming.s
+
+# target to generate assembly for a file
+DynamicProgramming.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/DynamicProgramming.cpp.s
+.PHONY : DynamicProgramming.cpp.s
+
 Graph.obj: Graph.cpp.obj
 .PHONY : Graph.obj
 
@@ -199,6 +223,54 @@ Graph.s: Graph.cpp.s
 Graph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
+
+List/ListElement.obj: List/ListElement.cpp.obj
+.PHONY : List/ListElement.obj
+
+# target to build an object file
+List/ListElement.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/List/ListElement.cpp.obj
+.PHONY : List/ListElement.cpp.obj
+
+List/ListElement.i: List/ListElement.cpp.i
+.PHONY : List/ListElement.i
+
+# target to preprocess a source file
+List/ListElement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/List/ListElement.cpp.i
+.PHONY : List/ListElement.cpp.i
+
+List/ListElement.s: List/ListElement.cpp.s
+.PHONY : List/ListElement.s
+
+# target to generate assembly for a file
+List/ListElement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/List/ListElement.cpp.s
+.PHONY : List/ListElement.cpp.s
+
+List/MyList.obj: List/MyList.cpp.obj
+.PHONY : List/MyList.obj
+
+# target to build an object file
+List/MyList.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/List/MyList.cpp.obj
+.PHONY : List/MyList.cpp.obj
+
+List/MyList.i: List/MyList.cpp.i
+.PHONY : List/MyList.i
+
+# target to preprocess a source file
+List/MyList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/List/MyList.cpp.i
+.PHONY : List/MyList.cpp.i
+
+List/MyList.s: List/MyList.cpp.s
+.PHONY : List/MyList.s
+
+# target to generate assembly for a file
+List/MyList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/List/MyList.cpp.s
+.PHONY : List/MyList.cpp.s
 
 Simulation.obj: Simulation.cpp.obj
 .PHONY : Simulation.obj
@@ -287,9 +359,18 @@ help:
 	@echo ... BruteForce.obj
 	@echo ... BruteForce.i
 	@echo ... BruteForce.s
+	@echo ... DynamicProgramming.obj
+	@echo ... DynamicProgramming.i
+	@echo ... DynamicProgramming.s
 	@echo ... Graph.obj
 	@echo ... Graph.i
 	@echo ... Graph.s
+	@echo ... List/ListElement.obj
+	@echo ... List/ListElement.i
+	@echo ... List/ListElement.s
+	@echo ... List/MyList.obj
+	@echo ... List/MyList.i
+	@echo ... List/MyList.s
 	@echo ... Simulation.obj
 	@echo ... Simulation.i
 	@echo ... Simulation.s

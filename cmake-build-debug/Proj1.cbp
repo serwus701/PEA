@@ -94,10 +94,28 @@
 		<Unit filename="E:/Code/PEA/BruteForce.h">
 			<Option target="Proj1"/>
 		</Unit>
+		<Unit filename="E:/Code/PEA/DynamicProgramming.cpp">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/DynamicProgramming.h">
+			<Option target="Proj1"/>
+		</Unit>
 		<Unit filename="E:/Code/PEA/Graph.cpp">
 			<Option target="Proj1"/>
 		</Unit>
 		<Unit filename="E:/Code/PEA/Graph.h">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/List/ListElement.cpp">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/List/ListElement.h">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/List/MyList.cpp">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/List/MyList.h">
 			<Option target="Proj1"/>
 		</Unit>
 		<Unit filename="E:/Code/PEA/Simulation.cpp">
