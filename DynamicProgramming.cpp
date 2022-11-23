@@ -22,7 +22,7 @@ DynamicProgramming::DynamicProgramming(Graph matrix) {
 }
 
 void DynamicProgramming::solution() {
-    dpResult result = recursionBuildSearchTree(0, 1);
+    recursionBuildSearchTree(0, 1);
 
     finalPath[nodeCount] = 0;
     for (int i = 0; i <= nodeCount; i++) {
@@ -34,7 +34,7 @@ void DynamicProgramming::solution() {
 
 
     printAnswers();
-    resetState();
+    cleanup();
 }
 
 void DynamicProgramming::printAnswers() {
@@ -48,49 +48,42 @@ void DynamicProgramming::printAnswers() {
     std::cout << std::endl;
 }
 
-void DynamicProgramming::resetState() {
+void DynamicProgramming::cleanup() {
     for (int i = 0; i < nodeCount; i++) {
         delete[] state[i];
     }
     delete[] state;
 }
 
-DynamicProgramming::dpResult DynamicProgramming::recursionBuildSearchTree(int currVertex, int visitedMask) {
-    if (visitedMask == numberOfPaths) {
-        return {matrix.getFromPosition(currVertex, 0), currVertex}; // return to starting city
+DynamicProgramming::dpResult DynamicProgramming::recursionBuildSearchTree(int currentVertex, int visitedVertexMask) {
+    if (visitedVertexMask == numberOfPaths) {
+        return {matrix.getFromPosition(currentVertex, 0), currentVertex}; // return to starting city
     }
-    if (state[currVertex][visitedMask].cost != INT_MAX) {
-        return state[currVertex][visitedMask];
+    if (state[currentVertex][visitedVertexMask].cost != INT_MAX) {
+        return state[currentVertex][visitedVertexMask];
     }
-    for (int i = 0; i < nodeCount; ++i) {
-        //Checking whether i is not the current vertex and whether it was not visited
-        if (i == currVertex || (visitedMask & (1 << i))) {
+    for (int consideredVertex = 0; consideredVertex < nodeCount; ++consideredVertex) {
+
+        if (consideredVertex == currentVertex || (visitedVertexMask & (1 << consideredVertex))) {
             continue;
         }
 
-        //Finding the best path from current vertex
-        auto result = recursionBuildSearchTree(i, visitedMask | (1 << i));
+        auto result = recursionBuildSearchTree(consideredVertex, visitedVertexMask | (1 << consideredVertex));
 
-        //Adding cost of edge going from current vertex to i
-        result.cost += matrix.getFromPosition(currVertex, i);
+        result.cost += matrix.getFromPosition(currentVertex, consideredVertex);
 
-        //Adding currVertex to begging of the path
-        result.path.addFront(currVertex);
+        result.path.addFront(currentVertex);
 
-        //Checking whether result of the path is better
-        // than the optimal result for this vertex and mask
-        // stored in state table
-        if (result.cost < state[currVertex][visitedMask].cost) {
-            //Updating state table result's cost and path
-            state[currVertex][visitedMask].cost = result.cost;
+        if (result.cost < state[currentVertex][visitedVertexMask].cost) {
+            state[currentVertex][visitedVertexMask].cost = result.cost;
 
-            state[currVertex][visitedMask].path.clear();
-            for (int it = 0; it < result.path.getSize(); it++) {
-                state[currVertex][visitedMask].path.addRear(result.path.getContainer(it));
+            state[currentVertex][visitedVertexMask].path.clear();
+            for (int j = 0; j < result.path.getSize(); j++) {
+                state[currentVertex][visitedVertexMask].path.addRear(result.path.getContainer(j));
             }
         }
     }
 
-    return state[currVertex][visitedMask];
+    return state[currentVertex][visitedVertexMask];
 }
 

@@ -36,9 +36,9 @@ class DynamicProgramming {
     dpResult **state{};
 
     void printAnswers();
-    void resetState();
+    void cleanup();
 
-    dpResult recursionBuildSearchTree(int currVertex, int visitedMask);
+    dpResult recursionBuildSearchTree(int currentVertex, int visitedVertexMask);
 
 public:
     DynamicProgramming(Graph);

@@ -18,8 +18,9 @@ void Simulation::run() {
     for (int i = 5; i < 13; ++i) {
         graphSize = i;
 
-        std::cout << " Average bf time size [" << i << "] " << simulateBF(graphSize, numberOfGraphs) << "\n";
-        std::cout << " Average bnb time size [" << i << "] " << simulateBnB(graphSize, numberOfGraphs) << "\n\n";
+        std::cout << " Average bnb time size [" << i << "] " << simulateBnB(graphSize, numberOfGraphs) << "\n";
+        std::cout << " Average dp time size [" << i << "] " << SimulateDP(graphSize, numberOfGraphs) << "\n";
+        std::cout << " Average bf time size [" << i << "] " << simulateBF(graphSize, numberOfGraphs) << "\n\n";
     }
 }
 
@@ -54,6 +55,23 @@ double Simulation::simulateBnB(int graphSize, int numberOfGraphs) {
 
         myTimer->startCounter();
         (new BranchAndBound(*graph))->solution();
+        totalTime += myTimer->getCounter();
+
+        delete graph;
+    }
+    return totalTime/numberOfGraphs;
+}
+
+double Simulation::SimulateDP(int graphSize, int numberOfGraphs) {
+    auto myTimer = new Timer;
+    double totalTime = 0;
+    for (int i = 0; i < numberOfGraphs; ++i) {
+        auto *graph = new Graph;
+        graph->randomlyGenerateGraph(graphSize);
+        //graph->readDataFromFile("tsp_10");
+
+        myTimer->startCounter();
+        (new DynamicProgramming(*graph))->solution();
         totalTime += myTimer->getCounter();
 
         delete graph;

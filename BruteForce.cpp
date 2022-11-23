@@ -36,6 +36,6 @@ void BruteForce::printAnswers(int minPathCost, int graphLen, int* minPath) {
     for (int i = 0; i < graphLen; ++i) {
         std::cout << minPath[i] << " ";
     }
-    std::cout << std::endl;
+    std::cout << "0" << std::endl;
 }
 

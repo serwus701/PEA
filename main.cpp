@@ -3,4 +3,5 @@
 
 int main() {
     ((new Simulation())->simulateBothAlgorithmsInterface());
+    //((new Simulation())->run());
 }
