@@ -94,6 +94,12 @@
 		<Unit filename="E:/Code/PEA/BruteForce.h">
 			<Option target="Proj1"/>
 		</Unit>
+		<Unit filename="E:/Code/PEA/DynamicArray.cpp">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/DynamicArray.h">
+			<Option target="Proj1"/>
+		</Unit>
 		<Unit filename="E:/Code/PEA/DynamicProgramming.cpp">
 			<Option target="Proj1"/>
 		</Unit>
@@ -116,6 +122,24 @@
 			<Option target="Proj1"/>
 		</Unit>
 		<Unit filename="E:/Code/PEA/List/MyList.h">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/Path.cpp">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/Path.h">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/RNG.cpp">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/RNG.h">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/SimulatedAnnealing.cpp">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/SimulatedAnnealing.h">
 			<Option target="Proj1"/>
 		</Unit>
 		<Unit filename="E:/Code/PEA/Simulation.cpp">

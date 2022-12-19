@@ -10,11 +10,9 @@ private:
 
 
 public:
-    ListElement();
+    ListElement(int);
 
     int getContainer();
-
-    int element();
 
     void setNext(ListElement *);
 

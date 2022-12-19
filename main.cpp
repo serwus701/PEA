@@ -1,7 +1,10 @@
+#include <iostream>
+#include <synchapi.h>
 #include "Simulation.h"
-#include "BranchAndBound.h"
+#include "Timer.h"
 
 int main() {
-    ((new Simulation())->simulateBothAlgorithmsInterface());
-    //((new Simulation())->run());
+
+    //((new Simulation())->simulateEveryAlgorithmInterface());
+    ((new Simulation())->run(2));
 }

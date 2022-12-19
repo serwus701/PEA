@@ -194,6 +194,62 @@ CMakeFiles/Proj1.dir/List/MyList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj1.dir/List/MyList.cpp.s"
 	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Code\PEA\List\MyList.cpp -o CMakeFiles\Proj1.dir\List\MyList.cpp.s
 
+CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.obj: CMakeFiles/Proj1.dir/flags.make
+CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.obj: ../SimulatedAnnealing.cpp
+CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.obj: CMakeFiles/Proj1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Code\PEA\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.obj"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.obj -MF CMakeFiles\Proj1.dir\SimulatedAnnealing.cpp.obj.d -o CMakeFiles\Proj1.dir\SimulatedAnnealing.cpp.obj -c E:\Code\PEA\SimulatedAnnealing.cpp
+
+CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.i"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Code\PEA\SimulatedAnnealing.cpp > CMakeFiles\Proj1.dir\SimulatedAnnealing.cpp.i
+
+CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.s"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Code\PEA\SimulatedAnnealing.cpp -o CMakeFiles\Proj1.dir\SimulatedAnnealing.cpp.s
+
+CMakeFiles/Proj1.dir/RNG.cpp.obj: CMakeFiles/Proj1.dir/flags.make
+CMakeFiles/Proj1.dir/RNG.cpp.obj: ../RNG.cpp
+CMakeFiles/Proj1.dir/RNG.cpp.obj: CMakeFiles/Proj1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Code\PEA\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Proj1.dir/RNG.cpp.obj"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj1.dir/RNG.cpp.obj -MF CMakeFiles\Proj1.dir\RNG.cpp.obj.d -o CMakeFiles\Proj1.dir\RNG.cpp.obj -c E:\Code\PEA\RNG.cpp
+
+CMakeFiles/Proj1.dir/RNG.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj1.dir/RNG.cpp.i"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Code\PEA\RNG.cpp > CMakeFiles\Proj1.dir\RNG.cpp.i
+
+CMakeFiles/Proj1.dir/RNG.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj1.dir/RNG.cpp.s"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Code\PEA\RNG.cpp -o CMakeFiles\Proj1.dir\RNG.cpp.s
+
+CMakeFiles/Proj1.dir/Path.cpp.obj: CMakeFiles/Proj1.dir/flags.make
+CMakeFiles/Proj1.dir/Path.cpp.obj: ../Path.cpp
+CMakeFiles/Proj1.dir/Path.cpp.obj: CMakeFiles/Proj1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Code\PEA\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Proj1.dir/Path.cpp.obj"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj1.dir/Path.cpp.obj -MF CMakeFiles\Proj1.dir\Path.cpp.obj.d -o CMakeFiles\Proj1.dir\Path.cpp.obj -c E:\Code\PEA\Path.cpp
+
+CMakeFiles/Proj1.dir/Path.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj1.dir/Path.cpp.i"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Code\PEA\Path.cpp > CMakeFiles\Proj1.dir\Path.cpp.i
+
+CMakeFiles/Proj1.dir/Path.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj1.dir/Path.cpp.s"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Code\PEA\Path.cpp -o CMakeFiles\Proj1.dir\Path.cpp.s
+
+CMakeFiles/Proj1.dir/DynamicArray.cpp.obj: CMakeFiles/Proj1.dir/flags.make
+CMakeFiles/Proj1.dir/DynamicArray.cpp.obj: ../DynamicArray.cpp
+CMakeFiles/Proj1.dir/DynamicArray.cpp.obj: CMakeFiles/Proj1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Code\PEA\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Proj1.dir/DynamicArray.cpp.obj"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Proj1.dir/DynamicArray.cpp.obj -MF CMakeFiles\Proj1.dir\DynamicArray.cpp.obj.d -o CMakeFiles\Proj1.dir\DynamicArray.cpp.obj -c E:\Code\PEA\DynamicArray.cpp
+
+CMakeFiles/Proj1.dir/DynamicArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Proj1.dir/DynamicArray.cpp.i"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Code\PEA\DynamicArray.cpp > CMakeFiles\Proj1.dir\DynamicArray.cpp.i
+
+CMakeFiles/Proj1.dir/DynamicArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Proj1.dir/DynamicArray.cpp.s"
+	"E:\CLion 2022.2.1\bin\mingw\bin\g++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Code\PEA\DynamicArray.cpp -o CMakeFiles\Proj1.dir\DynamicArray.cpp.s
+
 # Object files for target Proj1
 Proj1_OBJECTS = \
 "CMakeFiles/Proj1.dir/main.cpp.obj" \
@@ -204,7 +260,11 @@ Proj1_OBJECTS = \
 "CMakeFiles/Proj1.dir/Simulation.cpp.obj" \
 "CMakeFiles/Proj1.dir/DynamicProgramming.cpp.obj" \
 "CMakeFiles/Proj1.dir/List/ListElement.cpp.obj" \
-"CMakeFiles/Proj1.dir/List/MyList.cpp.obj"
+"CMakeFiles/Proj1.dir/List/MyList.cpp.obj" \
+"CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.obj" \
+"CMakeFiles/Proj1.dir/RNG.cpp.obj" \
+"CMakeFiles/Proj1.dir/Path.cpp.obj" \
+"CMakeFiles/Proj1.dir/DynamicArray.cpp.obj"
 
 # External object files for target Proj1
 Proj1_EXTERNAL_OBJECTS =
@@ -218,11 +278,15 @@ Proj1.exe: CMakeFiles/Proj1.dir/Simulation.cpp.obj
 Proj1.exe: CMakeFiles/Proj1.dir/DynamicProgramming.cpp.obj
 Proj1.exe: CMakeFiles/Proj1.dir/List/ListElement.cpp.obj
 Proj1.exe: CMakeFiles/Proj1.dir/List/MyList.cpp.obj
+Proj1.exe: CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.obj
+Proj1.exe: CMakeFiles/Proj1.dir/RNG.cpp.obj
+Proj1.exe: CMakeFiles/Proj1.dir/Path.cpp.obj
+Proj1.exe: CMakeFiles/Proj1.dir/DynamicArray.cpp.obj
 Proj1.exe: CMakeFiles/Proj1.dir/build.make
 Proj1.exe: CMakeFiles/Proj1.dir/linklibs.rsp
 Proj1.exe: CMakeFiles/Proj1.dir/objects1.rsp
 Proj1.exe: CMakeFiles/Proj1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Code\PEA\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Proj1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Code\PEA\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Proj1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Proj1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

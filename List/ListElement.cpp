@@ -1,17 +1,14 @@
 #include "ListElement.h"
 
 //getters and setters
-ListElement::ListElement() {
+ListElement::ListElement(int container) {
+    this->container = container;
     next = nullptr;
     previous = nullptr;
 }
 
 int ListElement::getContainer() {
     return container;
-}
-
-int ListElement::element() {
-    return this->container;
 }
 
 void ListElement::setNext(ListElement *nextElement) {

@@ -1,242 +1,244 @@
-//
-// Created by Michał on 13.03.2022.
-//
-
 #include <iostream>
 #include "MyList.h"
-//#include "../FileManagement.h"
 
-void MyList::addPrimalElement(ListElement *primalElement) {
-    //used in case of creating first element
-    head = primalElement;
-    tail = primalElement;
+ListElement *MyList::getElementPtr(int position) {
+    auto currElement = head;
+
+    for (int i = 0; i < position; ++i) {
+        currElement = currElement->getNext();
+    }
+
+    return currElement;
+}
+
+void MyList::addPrimalElement(int value) {
+    auto newElement = new ListElement(value);
+    head = newElement;
+    tail = newElement;
     size = 1;
 }
 
-void MyList::addRear(int element) {
-    //creating new element, stacking it, rearranging pointers to be pointed and to point adjacent elements
-    //setting new tail pointer
-    auto *newElement = new ListElement;
+void MyList::deleteFinalElement() {
+    delete head;
+    head = nullptr;
+    tail = nullptr;
+    size = 0;
+}
 
-    if (size == 0) {
-        addPrimalElement(newElement);
-        newElement->setContainer(element);
+MyList::MyList() {
+    size = 0;
+    head = nullptr;
+    tail = nullptr;
+}
+
+MyList::MyList(int begin, int size) {
+    this->size = 0;
+    head = nullptr;
+    tail = nullptr;
+
+    for (int i = 0; i < size; ++i) {
+        this->addRear(i + begin);
+    }
+}
+
+void MyList::swap(int pos1, int pos2) {
+    if(pos1 == pos2)
         return;
+    if(pos1 > pos2){
+        int temp = pos1;
+        pos1 = pos2;
+        pos2 = temp;
     }
 
-    ListElement *myTail = tail;
-    myTail->setNext(newElement);
+    if(pos1 < 0 || pos2 >= size)
+        return;
+
+    this->addOnPosition(pos2, this->at(pos1));
+    this->addOnPosition(pos1, this->at(pos2 + 1));
+    this->deletePos(pos1 + 1);
+    this->deletePos(pos2 + 1);
+}
+
+void MyList::addRear(int value) {
+    if(size == 0){
+        addPrimalElement(value);
+        return;
+    }
+    auto newElement = new ListElement(value);
+    tail->setNext(newElement);
     newElement->setPrevious(tail);
-    newElement->setContainer(element);
     tail = newElement;
-
     size++;
 }
 
-void MyList::addFront(int element) {
-    //creating new element, stacking it, rearranging pointers to be pointed and to point adjacent elements
-    //setting new head pointer
-    auto newElement = new ListElement;
-
-    if (size == 0) {
-        addPrimalElement(newElement);
-        newElement->setContainer(element);
+void MyList::addFront(int value) {
+    if(size == 0){
+        addPrimalElement(value);
         return;
     }
-
-    ListElement *myHead = head;
-    myHead->setPrevious(newElement);
+    auto newElement = new ListElement(value);
+    head->setPrevious(newElement);
     newElement->setNext(head);
-    newElement->setContainer(element);
     head = newElement;
-
     size++;
 }
 
-int MyList::getHead() {
-    return head->element();
-}
-
-int MyList::getSize() {
-    return size;
-}
-
-ListElement *MyList::getElementPtr(int position) {
-    //used to get pointer of an element
-    if (position < 0)
-        return nullptr;
-    if (position > size - 1)
-        return nullptr;
-
-    ListElement *tempElement = head;
-    for (int i = 0; i < position; i++) {
-        tempElement = tempElement->getNext();
-    }
-    return tempElement;
-}
-
-void MyList::deletePos(int position) {
-    //iterate trough list until reaching given position. if so deletes it and restores pointers
-    if ((position > 0) && (position < size - 1) && (size > 0)) {
-
-        if (position == size - 1) {
-            deleteRear();
-            return;
-        }
-        if (position == 0) {
-            deleteFront();
-            return;
-        }
-
-        ListElement *temp = head;
-        for (int i = 0; i < position; i++) {
-            temp = temp->getNext();
-        }
-
-        ListElement *myNext = temp->getNext();
-        ListElement *myPrevious = temp->getPrevious();
-
-        myPrevious->setNext(myNext);
-        myNext->setPrevious(myPrevious);
-
-        delete temp;
-
-        size--;
-
-    }
-    if (position == 0 && size > 0)
-        deleteFront();
-    else if (position == size - 1 && size > 0)
-        deleteRear();
-}
-
-int MyList::getContainer(int position) {
-    //iterating trough entire list until reaching given position. returnes object on that position
-    ListElement *tempPointer = getElementPtr(position);
-    if (tempPointer != nullptr)
-        return tempPointer->getContainer();
-    else
-        return NULL;
-}
-
-void MyList::addOnPosition(int position, int element) {
-    //iterate trough list until reaching given position. if so adds there new element and restores pointers
-    if (position == size) {
-        addRear(element);
+void MyList::addOnPosition(int position, int value) {
+    if(position > size || position < 0)
         return;
-    }
-    if (position == 0) {
-        addFront(element);
+
+    if(position == 0){
+        addFront(value);
         return;
     }
 
-    ListElement *currentPositionPtr = getElementPtr(position);
-
-    if (currentPositionPtr != nullptr) {
-        auto newElement = new ListElement;
-
-        newElement->setNext(currentPositionPtr);
-        newElement->setPrevious(currentPositionPtr->getPrevious());
-        newElement->setContainer(element);
-
-        currentPositionPtr->setPrevious(newElement);
-        newElement->getPrevious()->setNext(newElement);
-        size++;
+    if(position == size){
+        addRear(value);
+        return;
     }
+
+    auto currElement = head;
+    for (int i = 0; i < position; ++i) {
+        currElement = currElement->getNext();
+    }
+    auto newElement = new ListElement(value);
+    newElement->setNext(currElement);
+    newElement->setPrevious(currElement->getPrevious());
+
+    newElement->getPrevious()->setNext(newElement);
+    newElement->getNext()->setPrevious(newElement);
+
+    size++;
+
 }
 
 void MyList::deleteRear() {
-    //deletes rear object and restores pointers
-    if (size == 1) {
-        delete tail;
-        tail = nullptr;
-        head = nullptr;
-        size--;
-    } else if (size > 0) {
-        ListElement *temp = tail;
-        tail = tail->getPrevious();
-        tail->setNext(nullptr);
-        size--;
-        delete temp;
+    if(size < 1)
+        return;
+
+    if(size == 1){
+        deleteFinalElement();
+        return;
     }
+
+    tail = tail->getPrevious();
+    delete tail->getNext();
+    tail->setNext(nullptr);
+    size--;
 }
 
 void MyList::deleteFront() {
-    //deletes front object and restores pointers
-    if (size == 1) {
-        delete tail;
-        tail = nullptr;
-        head = nullptr;
-        size--;
-    } else if (size > 0) {
-        ListElement *temp = head;
-        head = head->getNext();
-        head->setPrevious(nullptr);
-        size--;
-        delete temp;
+    if(size < 1)
+        return;
+
+    if(size == 1){
+        deleteFinalElement();
+        return;
     }
+
+    head = head->getNext();
+    delete head->getPrevious();
+    head->setPrevious(nullptr);
+    size--;
 }
 
-int MyList::show() {
-    //iterates trough array and reads its containers
-    if (size > 0) {
-        ListElement *iterator = head;
-        std::cout << "List: ";
-        while (iterator->getNext() != nullptr) {
-            std::cout << iterator->getContainer() << " ";
-            iterator = iterator->getNext();
-        }
-        std::cout << iterator->getContainer() << " ";
-        std::cout << std::endl;
-    }
-}
-
-int MyList::findFirst(int number) {
-    //iterates trough array until finding container matching given value
+void MyList::deletePos(int position) {
+    if(position < 0 || position >= size)
+        return;
 
     if(size == 0)
-        return -1;
+        return;
 
-    ListElement *iterator = head;
-    int i = 0;
-    while (iterator->getNext() != nullptr) {
-        if (iterator->getContainer() == number)
-            return i;
-        iterator = iterator->getNext();
-        i++;
+    if(position == 0){
+        deleteFront();
+        return;
     }
-    return -1;
-}
 
-void MyList::deleteAll() {
-    //iterates trough list and deletes every element
-    ListElement *tempPtr = head;
-    if (tempPtr != nullptr) {
-        while (tempPtr->getNext() != nullptr) {
-            tempPtr = tempPtr->getNext();
-            delete tempPtr->getPrevious();
-        }
-        delete tempPtr;
+    if(position == size - 1){
+        deleteRear();
+        return;
     }
+
+    auto currElement = head;
+    for (int i = 0; i < position; ++i) {
+        currElement = currElement->getNext();
+    }
+    currElement->getNext()->setPrevious(currElement->getPrevious());
+    currElement->getPrevious()->setNext(currElement->getNext());
+
+    delete currElement;
+
+    size--;
 }
 
 void MyList::clear() {
     while (size > 0)
         deleteRear();
 }
-/*
-void MyList::readFromFile(std::string fileName) {
-    //opening file, reading size, reading and adding elements from file
-    FileManagement myFileManager;
-    myFileManager.openFile('i', fileName);
 
-    int howManyElements = myFileManager.getLine();
-    for (int i = 0; i < howManyElements; i++) {
-        int readFromFile;
-        readFromFile = myFileManager.getLine();
-        addRear(readFromFile);
-    }
-    myFileManager.closeFile();
+int MyList::getSize() {
+    return size;
 }
-*/
 
+int MyList::getHead() {
+    return head->getContainer();
+}
+
+int MyList::at(int position) {
+    if (position < 0 || position >= size)
+        return 0;
+
+    auto currElement = head;
+    for (int i = 0; i < position; ++i) {
+        currElement = currElement->getNext();
+    }
+    return currElement->getContainer();
+}
+
+int MyList::findFirst(int value) {
+    auto currElement = head;
+    int position = 0;
+    while (currElement != nullptr){
+        if (currElement->getContainer() == value)
+            return position;
+        position++;
+        currElement = currElement->getNext();
+    }
+    return -1;
+}
+
+void MyList::show() const {
+    if (size > 0) {
+        ListElement *iterator = head;
+        while (iterator->getNext() != nullptr) {
+            std::cout << iterator->getContainer() << " ";
+            iterator = iterator->getNext();
+        }
+        std::cout << iterator->getContainer() << " ";
+        std::cout << std::endl;
+    } else{
+        std::cout << "List is empty" << std::endl;
+    }
+}
+
+void MyList::deleteAll() {
+    if(size == 0)
+        return;
+    if(size == 1) {
+        deleteFinalElement();
+        return;
+    }
+
+    auto currElement = head;
+    while (currElement->getNext() != nullptr){
+        currElement = currElement->getNext();
+        delete currElement->getPrevious();
+    }
+    delete currElement;
+
+    head = nullptr;
+    tail = nullptr;
+
+    size = 0;
+
+}

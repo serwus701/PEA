@@ -27,7 +27,7 @@ void DynamicProgramming::solution() {
     finalPath[nodeCount] = 0;
     for (int i = 0; i <= nodeCount; i++) {
 
-        finalPath[i] = state[0][1].path.getContainer(i);
+        finalPath[i] = state[0][1].path.at(i);
     }
 
     finalCost = state[0][1].cost;
@@ -79,7 +79,7 @@ DynamicProgramming::dpResult DynamicProgramming::recursionBuildSearchTree(int cu
 
             state[currentVertex][visitedVertexMask].path.clear();
             for (int j = 0; j < result.path.getSize(); j++) {
-                state[currentVertex][visitedVertexMask].path.addRear(result.path.getContainer(j));
+                state[currentVertex][visitedVertexMask].path.addRear(result.path.at(j));
             }
         }
     }

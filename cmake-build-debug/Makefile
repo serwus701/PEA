@@ -176,6 +176,30 @@ BruteForce.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/BruteForce.cpp.s
 .PHONY : BruteForce.cpp.s
 
+DynamicArray.obj: DynamicArray.cpp.obj
+.PHONY : DynamicArray.obj
+
+# target to build an object file
+DynamicArray.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/DynamicArray.cpp.obj
+.PHONY : DynamicArray.cpp.obj
+
+DynamicArray.i: DynamicArray.cpp.i
+.PHONY : DynamicArray.i
+
+# target to preprocess a source file
+DynamicArray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/DynamicArray.cpp.i
+.PHONY : DynamicArray.cpp.i
+
+DynamicArray.s: DynamicArray.cpp.s
+.PHONY : DynamicArray.s
+
+# target to generate assembly for a file
+DynamicArray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/DynamicArray.cpp.s
+.PHONY : DynamicArray.cpp.s
+
 DynamicProgramming.obj: DynamicProgramming.cpp.obj
 .PHONY : DynamicProgramming.obj
 
@@ -272,6 +296,78 @@ List/MyList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/List/MyList.cpp.s
 .PHONY : List/MyList.cpp.s
 
+Path.obj: Path.cpp.obj
+.PHONY : Path.obj
+
+# target to build an object file
+Path.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/Path.cpp.obj
+.PHONY : Path.cpp.obj
+
+Path.i: Path.cpp.i
+.PHONY : Path.i
+
+# target to preprocess a source file
+Path.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/Path.cpp.i
+.PHONY : Path.cpp.i
+
+Path.s: Path.cpp.s
+.PHONY : Path.s
+
+# target to generate assembly for a file
+Path.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/Path.cpp.s
+.PHONY : Path.cpp.s
+
+RNG.obj: RNG.cpp.obj
+.PHONY : RNG.obj
+
+# target to build an object file
+RNG.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/RNG.cpp.obj
+.PHONY : RNG.cpp.obj
+
+RNG.i: RNG.cpp.i
+.PHONY : RNG.i
+
+# target to preprocess a source file
+RNG.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/RNG.cpp.i
+.PHONY : RNG.cpp.i
+
+RNG.s: RNG.cpp.s
+.PHONY : RNG.s
+
+# target to generate assembly for a file
+RNG.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/RNG.cpp.s
+.PHONY : RNG.cpp.s
+
+SimulatedAnnealing.obj: SimulatedAnnealing.cpp.obj
+.PHONY : SimulatedAnnealing.obj
+
+# target to build an object file
+SimulatedAnnealing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.obj
+.PHONY : SimulatedAnnealing.cpp.obj
+
+SimulatedAnnealing.i: SimulatedAnnealing.cpp.i
+.PHONY : SimulatedAnnealing.i
+
+# target to preprocess a source file
+SimulatedAnnealing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.i
+.PHONY : SimulatedAnnealing.cpp.i
+
+SimulatedAnnealing.s: SimulatedAnnealing.cpp.s
+.PHONY : SimulatedAnnealing.s
+
+# target to generate assembly for a file
+SimulatedAnnealing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/SimulatedAnnealing.cpp.s
+.PHONY : SimulatedAnnealing.cpp.s
+
 Simulation.obj: Simulation.cpp.obj
 .PHONY : Simulation.obj
 
@@ -359,6 +455,9 @@ help:
 	@echo ... BruteForce.obj
 	@echo ... BruteForce.i
 	@echo ... BruteForce.s
+	@echo ... DynamicArray.obj
+	@echo ... DynamicArray.i
+	@echo ... DynamicArray.s
 	@echo ... DynamicProgramming.obj
 	@echo ... DynamicProgramming.i
 	@echo ... DynamicProgramming.s
@@ -371,6 +470,15 @@ help:
 	@echo ... List/MyList.obj
 	@echo ... List/MyList.i
 	@echo ... List/MyList.s
+	@echo ... Path.obj
+	@echo ... Path.i
+	@echo ... Path.s
+	@echo ... RNG.obj
+	@echo ... RNG.i
+	@echo ... RNG.s
+	@echo ... SimulatedAnnealing.obj
+	@echo ... SimulatedAnnealing.i
+	@echo ... SimulatedAnnealing.s
 	@echo ... Simulation.obj
 	@echo ... Simulation.i
 	@echo ... Simulation.s

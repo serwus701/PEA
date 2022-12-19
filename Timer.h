@@ -7,20 +7,16 @@
 
 
 #include <cctype>
+#include <chrono>
 
 class Timer {
 private:
-    double PCFreq;
-    __int64 CounterStart;
+    std::chrono::high_resolution_clock::time_point startTime;
 
 public:
-    Timer();
-
     void startCounter();
 
-    void resetCounter();
-
-    double getCounter() const;
+    double getMilliseconds() const;
 };
 
 
