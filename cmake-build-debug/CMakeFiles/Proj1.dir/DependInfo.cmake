@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/Code/PEA/BruteForce.cpp" "CMakeFiles/Proj1.dir/BruteForce.cpp.obj" "gcc" "CMakeFiles/Proj1.dir/BruteForce.cpp.obj.d"
   "E:/Code/PEA/DynamicArray.cpp" "CMakeFiles/Proj1.dir/DynamicArray.cpp.obj" "gcc" "CMakeFiles/Proj1.dir/DynamicArray.cpp.obj.d"
   "E:/Code/PEA/DynamicProgramming.cpp" "CMakeFiles/Proj1.dir/DynamicProgramming.cpp.obj" "gcc" "CMakeFiles/Proj1.dir/DynamicProgramming.cpp.obj.d"
+  "E:/Code/PEA/FileManagement.cpp" "CMakeFiles/Proj1.dir/FileManagement.cpp.obj" "gcc" "CMakeFiles/Proj1.dir/FileManagement.cpp.obj.d"
   "E:/Code/PEA/Graph.cpp" "CMakeFiles/Proj1.dir/Graph.cpp.obj" "gcc" "CMakeFiles/Proj1.dir/Graph.cpp.obj.d"
   "E:/Code/PEA/List/ListElement.cpp" "CMakeFiles/Proj1.dir/List/ListElement.cpp.obj" "gcc" "CMakeFiles/Proj1.dir/List/ListElement.cpp.obj.d"
   "E:/Code/PEA/List/MyList.cpp" "CMakeFiles/Proj1.dir/List/MyList.cpp.obj" "gcc" "CMakeFiles/Proj1.dir/List/MyList.cpp.obj.d"

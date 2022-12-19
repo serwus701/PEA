@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Proj1.dir/DynamicArray.cpp.obj.d"
   "CMakeFiles/Proj1.dir/DynamicProgramming.cpp.obj"
   "CMakeFiles/Proj1.dir/DynamicProgramming.cpp.obj.d"
+  "CMakeFiles/Proj1.dir/FileManagement.cpp.obj"
+  "CMakeFiles/Proj1.dir/FileManagement.cpp.obj.d"
   "CMakeFiles/Proj1.dir/Graph.cpp.obj"
   "CMakeFiles/Proj1.dir/Graph.cpp.obj.d"
   "CMakeFiles/Proj1.dir/List/ListElement.cpp.obj"

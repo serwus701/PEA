@@ -253,4 +253,10 @@ CMakeFiles/Proj1.dir/main.cpp.obj: E:\Code\PEA\main.cpp \
  E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
  E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
  E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
- E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h \
+ E:\Code\PEA\FileManagement.h \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/codecvt.h \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc

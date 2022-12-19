@@ -224,6 +224,30 @@ DynamicProgramming.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/DynamicProgramming.cpp.s
 .PHONY : DynamicProgramming.cpp.s
 
+FileManagement.obj: FileManagement.cpp.obj
+.PHONY : FileManagement.obj
+
+# target to build an object file
+FileManagement.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/FileManagement.cpp.obj
+.PHONY : FileManagement.cpp.obj
+
+FileManagement.i: FileManagement.cpp.i
+.PHONY : FileManagement.i
+
+# target to preprocess a source file
+FileManagement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/FileManagement.cpp.i
+.PHONY : FileManagement.cpp.i
+
+FileManagement.s: FileManagement.cpp.s
+.PHONY : FileManagement.s
+
+# target to generate assembly for a file
+FileManagement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Proj1.dir\build.make CMakeFiles/Proj1.dir/FileManagement.cpp.s
+.PHONY : FileManagement.cpp.s
+
 Graph.obj: Graph.cpp.obj
 .PHONY : Graph.obj
 
@@ -461,6 +485,9 @@ help:
 	@echo ... DynamicProgramming.obj
 	@echo ... DynamicProgramming.i
 	@echo ... DynamicProgramming.s
+	@echo ... FileManagement.obj
+	@echo ... FileManagement.i
+	@echo ... FileManagement.s
 	@echo ... Graph.obj
 	@echo ... Graph.i
 	@echo ... Graph.s

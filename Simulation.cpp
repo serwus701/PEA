@@ -11,6 +11,7 @@
 #include "BranchAndBound.h"
 #include "DynamicProgramming.h"
 #include "SimulatedAnnealing.h"
+#include "FileManagement.h"
 
 void Simulation::run(int instance) {
 
@@ -119,6 +120,10 @@ double Simulation::simulateSA(int graphSize, int numberOfGraphs) {
 
 void Simulation::testSAEfficiency(Graph &graph, int bestPathCost) {
 
+    auto fileManager = new FileManagement();
+
+    fileManager->openFile('o', "output");
+
     auto timer = new Timer();
 
     const int repetitions = 100;
@@ -149,6 +154,12 @@ void Simulation::testSAEfficiency(Graph &graph, int bestPathCost) {
             delete SA;
             delete solution;
         }
+
+        fileManager->writeStr("Heat\n");
+        fileManager->writeNum(i);
+        fileManager->writeNum(time / repetitions);
+        fileManager->writeNum(((successDifferenceRate / repetitions + bestPathCost) / bestPathCost - 1)  * 100);
+        fileManager->writeStr("\n");
 
         std::cout << "Heat equal " << i << std::endl;
         std::cout << "Time avg " << time / repetitions << " milliseconds" << std::endl;
@@ -181,6 +192,12 @@ void Simulation::testSAEfficiency(Graph &graph, int bestPathCost) {
             delete solution;
         }
 
+        fileManager->writeStr("Cooling Rate\n");
+        fileManager->writeNum(coolingRate);
+        fileManager->writeNum(time / repetitions);
+        fileManager->writeNum(((successDifferenceRate / repetitions + bestPathCost) / bestPathCost - 1)  * 100);
+        fileManager->writeStr("\n");
+
         std::cout << "Cooling Rate equal " << coolingRate << std::endl;
         std::cout << "Time avg " << time / repetitions << " milliseconds" << std::endl;
         std::cout << "Avg failure ratio  " << ((successDifferenceRate / repetitions + bestPathCost) / bestPathCost - 1)  * 100 << "%"
@@ -212,6 +229,12 @@ void Simulation::testSAEfficiency(Graph &graph, int bestPathCost) {
             delete solution;
         }
 
+        fileManager->writeStr("era limit\n");
+        fileManager->writeNum(i);
+        fileManager->writeNum(time / repetitions);
+        fileManager->writeNum(((successDifferenceRate / repetitions + bestPathCost) / bestPathCost - 1)  * 100);
+        fileManager->writeStr("\n");
+
         std::cout << "era limit equal " << i << std::endl;
         std::cout << "Time avg " << time / repetitions << " milliseconds" << std::endl;
         std::cout << "Avg failure ratio  " << ((successDifferenceRate / repetitions + bestPathCost) / bestPathCost - 1)  * 100 << "%"
@@ -220,5 +243,7 @@ void Simulation::testSAEfficiency(Graph &graph, int bestPathCost) {
 
     }
 
+    fileManager->closeFile();
     delete timer;
+    delete fileManager;
 }

@@ -106,6 +106,12 @@
 		<Unit filename="E:/Code/PEA/DynamicProgramming.h">
 			<Option target="Proj1"/>
 		</Unit>
+		<Unit filename="E:/Code/PEA/FileManagement.cpp">
+			<Option target="Proj1"/>
+		</Unit>
+		<Unit filename="E:/Code/PEA/FileManagement.h">
+			<Option target="Proj1"/>
+		</Unit>
 		<Unit filename="E:/Code/PEA/Graph.cpp">
 			<Option target="Proj1"/>
 		</Unit>

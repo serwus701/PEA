@@ -161,4 +161,10 @@ CMakeFiles/Proj1.dir/Simulation.cpp.obj: E:\Code\PEA\Simulation.cpp \
  E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h \
  E:\Code\PEA\BruteForce.h E:\Code\PEA\BranchAndBound.h \
  E:\Code\PEA\DynamicProgramming.h E:\Code\PEA\SimulatedAnnealing.h \
- E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/array \
+ E:\Code\PEA\FileManagement.h \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/codecvt.h \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ E:/CLion\ 2022.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc
